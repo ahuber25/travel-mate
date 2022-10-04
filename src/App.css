@@ -18,8 +18,8 @@ header {
   height: 100px;
   background-image: url("../public/images/sydney.jpg");
   background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-size: contain;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -82,8 +82,8 @@ header h1 a:hover {
 .title-image {
   background-image: url("../public/images/sydney.jpg");
   background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-size: contain;
   height: 300px;
   width: 100%;
 }
