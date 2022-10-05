@@ -71,10 +71,6 @@ header h1 a:hover {
   font-size: 20px;
 }
 
-.nav ul li input {
-  margin-left: 20px;
-}
-
 .nav ul li a:hover {
   color: aqua;
 }
@@ -84,14 +80,14 @@ header h1 a:hover {
   background-attachment: fixed;
   background-position: top;
   background-size: contain;
-  height: 300px;
+  height: 200px;
   width: 100%;
 }
 
 .subtitle {
   text-align: right;
   float: right;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-right: 50px;
   font-size: 40px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -102,6 +98,10 @@ header h1 a:hover {
 
 .subtitle:hover {
   opacity: 1;
+}
+
+input {
+  margin: 24px;
 }
 
 section {
