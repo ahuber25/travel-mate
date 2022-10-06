@@ -2,8 +2,9 @@ import React from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Home from './pages/Home';
-import Login from './pages/Login';
-import Footer from './components/Footer'
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Footer from './components/Footer';
 import './App.css';
 
 
@@ -14,6 +15,7 @@ function App() {
     <Header></Header>
     <Home></Home>
     <Login></Login>
+    <Signup></Signup>
     <Footer></Footer>
     </div>
   );
