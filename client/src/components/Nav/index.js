@@ -6,8 +6,8 @@ function Nav() {
         <h1>Travel Mate</h1>
         <div class="nav">
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/login.html">Login</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#login">Login</a></li>
             </ul>
         </div>
     </header>
