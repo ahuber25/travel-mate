@@ -16,7 +16,7 @@ body {
 
 header {
   height: 100px;
-  background-image: url("../public/images/sydney.jpg");
+  background-image: url("./assets/images/sydney.jpg");
   background-attachment: fixed;
   background-position: top;
   background-size: contain;
@@ -76,7 +76,7 @@ header h1 a:hover {
 }
 
 .title-image {
-  background-image: url("../public/images/sydney.jpg");
+  background-image: url("./assets/images/sydney.jpg");
   background-attachment: fixed;
   background-position: top;
   background-size: contain;
