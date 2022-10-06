@@ -7,9 +7,6 @@ import './App.css';
 
 
 function App() {
-
-  
-  
   return (
     <div>
     <Nav></Nav>
