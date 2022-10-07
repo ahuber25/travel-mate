@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
@@ -35,3 +36,9 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
+=======
+const typeDefs = require('./typeDefs');
+const resolvers = require('./resolvers');
+
+module.exports = { typeDefs, resolvers };
+>>>>>>> 55ce8b85b2c707184ae73e4d69f3e874c0e88999
