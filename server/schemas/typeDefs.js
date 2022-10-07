@@ -18,30 +18,35 @@ type Trip {
   tripEnd: Int
   country: String
   city: String
-  days: [Day]
+  days: Day
 }
 
 type Event {
   _id: ID
-  eventname: String
-  startDate: Int
-  endDate: Int
-  username: String
+  eventName: String
+  startTime: Int
+  endTime: Int
 }
 
 type Day {
     _id: ID
     location: String
     createdAt: String
+  }
+  type User {
+    _id: ID
     username: String
+    email: String
+    events: [event]
   }
 
+
 type Query {
-  me: User
-  users: [User]
-  user(username: String!): User
-  trips(username: String): [Trip]
+  days: [Day]
+  trips(day: ID, location: String): [Trip]
   trip(_id: ID!): Trip
+  user: User
+  event(_id: ID!): Event
 }
 
 type Mutation {
