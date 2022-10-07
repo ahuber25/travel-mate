@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Trip } = require('../models');
+const { User, Trip, Day } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -32,6 +32,17 @@ const resolvers = {
         const token = signToken(user);
   
         return { token, user };
+      },
+      addtrips: async (parent, args) => {
+        const Trip = await Trip.create(args);
+        const token = signToken(trip);
+        return {token, trip};
+      },
+      addDays: async (parent, args) => {
+        const Day = await Day.create(args);
+        const token = signToken(Day)
+
+        return {token, day };
       },
       login: async (parent, { email, password }) => {
         const user = await User.findOne({ email });
