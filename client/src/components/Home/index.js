@@ -2,12 +2,12 @@ import React from "react";
 
 function Home() {
     return (
-    <section class="items" id="about">
-        <div class="section-titles">
+    <section className="items" id="about">
+        <div className="section-titles">
             <h3>Where shall we take you?</h3>
             <p><input type="text" placeholder="Search.."></input></p>
         </div>
-        <div class="info">
+        <div className="info">
             <p>Travel Mate description here</p>
         </div>
     </section>

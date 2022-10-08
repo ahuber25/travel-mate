@@ -2,34 +2,22 @@ import React from "react";
 
 function Login() {
 
-    return (<div>
+    return (
+    <div className="signin">
+        
+        <form className="logsign">
         <h2>Login</h2>
-        <form>
-            <label>
-                Username:
-            <input type="text" name="username" />
-            </label>
-            <label>
-                Password:
-            <input type="text" name="password" />
-            </label>
+            <label>Username:</label> <input type="text" name="username" /><br/>
+            <label>Password:</label> <input type="text" name="password" /><br/>
             <input type="submit" value="Submit" />
         
         </form>
+        <form className="logsign">
         <h2>Signup</h2>
-        <form>
-        <label>
-            Name:
-        <input type="text" name="name" />
-        </label>
-        <label>
-            Email:
-        <input type="text" name="email" />
-        </label>
-        <label>
-            Password:
-        <input type="text" name="password" />
-        </label>
+        <label>Name:</label> <input type="text" name="name" /><br/>
+        <label>Username:</label> <input type="text" name="username" /><br/>
+        <label>Email:</label> <input type="text" name="email" /><br/>
+        <label>Password:</label> <input type="text" name="password" /><br/>
         <input type="submit" value="Submit" />
     </form>
     </div>
