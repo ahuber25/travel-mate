@@ -1,15 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 
-function Days() {
+class Days extends Component {
+    render() {
 
-    return (
-        <section className="daytrip">
-            <ul className="days">
-                <li>Day Events</li>
-            </ul>
-        </section>
-    )
+        return (
+            <section className="daytrip">
+                <ul className="days">
+                    <li>Day Events</li>
+                </ul>
+            </section>
+        )
 
+    }
 }
 
 export default Days;

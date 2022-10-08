@@ -11,9 +11,10 @@ import './App.css';
 
 function App() {
 
+
   return (
     <div>
-    <Nav></Nav>
+      <Nav></Nav>
     <Header></Header>
     <Home></Home>
     <Login></Login>
