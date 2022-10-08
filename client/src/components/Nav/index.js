@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Nav() {
 
-    const [ signedIn ] = useState(false);
     
     return (
         <header>
@@ -10,16 +9,9 @@ function Nav() {
         <div className="nav">
             <ul>
                 <li><a href="/">Home</a></li>
-                {!signedIn ? (
-                    <>
-                    <li><a href="#login">Login</a></li>
-                    </>
-                ) : (
-                    <>
-                    <li><a href="#calendar">Calendar</a></li>
-                    <li><a href="#logout">Logout</a></li>
-                    </>
-                )}
+                <li><a href="#calendar">Calendar</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#logout">Logout</a></li>
                 
             </ul>
         </div>
