@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Login extends Component {
-    render() {
+function Login() {
 
         return (
             <section className="login">
@@ -26,6 +25,5 @@ class Login extends Component {
         </section>
         )
     }
-}
 
 export default Login

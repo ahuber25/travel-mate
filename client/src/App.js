@@ -12,20 +12,20 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
-
+  
     return (
       <div>
           <Nav></Nav>
           <Header/>
           <Routes>
             <Route exact path="/" element={<Home/>}/>
-            <Route exact path="/calendar" element={Calendar}/>
-            <Route exact path="/days" element={Days}/>
-            <Route exact path="/login" element={Login}/>
+            <Route exact path="/calendar" element={<Calendar/>}/>
+            <Route exact path="/days" element={<Days/>}/>
+            <Route exact path="/login" element={<Login/>}/>
           </Routes>
           <Footer/>
       </div>
     );
-  }
+}
 
 export default App;

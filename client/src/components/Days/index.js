@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Days extends Component {
-    render() {
+function Days() {
+
 
         return (
             <section className="daytrip">
@@ -12,6 +12,5 @@ class Days extends Component {
         )
 
     }
-}
 
 export default Days;

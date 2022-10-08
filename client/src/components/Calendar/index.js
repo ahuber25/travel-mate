@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Calendar extends Component {
-    render() {
+function Calendar() {
+
         return(
                 <section className="calendar">
                 
@@ -31,7 +31,6 @@ class Calendar extends Component {
                 </section>
         )
 
-    }
 }
 
 export default Calendar;

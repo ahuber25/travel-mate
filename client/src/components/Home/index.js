@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Home extends Component {
-    render() {
+function Home() {
         return (
         <section className="home">
             <div className="section-titles">
@@ -14,6 +13,5 @@ class Home extends Component {
         </section>
         )
     }
-}
 
 export default Home;
