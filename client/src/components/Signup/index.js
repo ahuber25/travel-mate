@@ -3,21 +3,23 @@ import React from "react";
 function Signup() {
 
     return (
+        <>
         <form>
             <label>
                 Name:
-            <input type="text" name="name" />
+                <input type="text" name="name" />
             </label>
             <label>
                 Email:
-            <input type="text" name="email" />
+                <input type="text" name="email" />
             </label>
             <label>
                 Password:
-            <input type="text" name="password" />
+                <input type="text" name="password" />
             </label>
             <input type="submit" value="Submit" />
         </form>
+        <script src="../assets/js/signup.js"></script></>
     )
 }
 
