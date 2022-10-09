@@ -127,6 +127,11 @@ section {
   height: 24px;
 }
 
+.logsign span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .section-titles {
   width: 220px;
 }
