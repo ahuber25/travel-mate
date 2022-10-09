@@ -3,7 +3,6 @@ import React from "react";
 function Signup() {
 
     return (
-        <>
         <form>
             <label>
                 Name:
@@ -19,7 +18,6 @@ function Signup() {
             </label>
             <input type="submit" value="Submit" />
         </form>
-        <script src="../assets/js/signup.js"></script></>
     )
 }
 
