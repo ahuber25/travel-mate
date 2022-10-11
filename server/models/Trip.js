@@ -9,11 +9,11 @@ const tripSchema = new Schema(
       trim: true,
     },
     tripStart: {
-      type: Date,
+      type: String,
       required: true,
     },
     tripEnd: {
-      type: Date,
+      type: String,
       required: true,
     },
     country: {
