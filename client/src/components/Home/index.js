@@ -1,5 +1,4 @@
-import React from "react";
-import {useEffect} from "react"
+import {React, useEffect} from "react";
 
 function Home() {
     const myFunction = () => {
@@ -25,13 +24,14 @@ function Home() {
           document.removeEventListener('keydown', keyDownHandler);
         };
       }, []);
+
+
     
     return (
         <section className="home">
             <div className="section-titles">
                 <h3>Where shall we take you?</h3>
-                <p><input id="city" type="text" placeholder="Search.." 
-                ></input></p>
+                <p><input id="city" type="text" placeholder="Search.." ></input></p>
             </div>
             <div className="info">
                 <p>Travel Mate description here</p>
