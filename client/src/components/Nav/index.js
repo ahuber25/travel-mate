@@ -12,7 +12,6 @@ function Nav() {
                 <ul>
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/calendar">Calendar</NavLink></li>
-                    <li><NavLink to="/days">Day</NavLink></li>
                     {!signedIn ? (
                         <>
                         <li><NavLink to="/login">Login</NavLink></li>
