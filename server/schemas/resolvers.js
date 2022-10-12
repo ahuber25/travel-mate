@@ -118,17 +118,7 @@ const resolvers = {
       return { token, trip };
     },
 
-    // addEvent: async (parent, { trips }, context) => {
-    //   if (context.user) {
-    //     const event = new Event({ trips });
-    //     await User.findByIdAndUpdate(context.user._id, {
-    //       $push: { events: event },
-    //     });
-    //     return event;
-    //   }
-
-    //   throw new AuthenticationError("Not logged in");
-    // },
+    
 
     updatetrip: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
