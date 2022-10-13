@@ -72,7 +72,6 @@ const Signup = () => {
               <button className="btn d-block w-100" type="submit">
                 Submit
               </button>
-              <div><a href='/login'>Already have an account? Login!</a></div>
             </form>
             
 

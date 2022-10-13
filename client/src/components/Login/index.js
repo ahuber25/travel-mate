@@ -66,7 +66,6 @@ const Login = (props) => {
               <button className="btn d-block w-100" type="submit">
                 Submit
               </button>
-              <div><a href="/signup">Don't have an account? Sign up here!</a></div>
             </form>
 
             {error && <div>Login failed</div>}
