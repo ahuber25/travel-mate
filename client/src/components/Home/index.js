@@ -5,10 +5,9 @@ function Home() {
         <section className="home">
             <div className="section-titles">
                 <h3>Where shall we take you?</h3>
-                <p><input type="text" placeholder="Search.."></input></p>
             </div>
             <div className="info">
-                <p>Travel Mate description here</p>
+                <p>Welcome to Travel Mate! This website was built so you could have a place to login and enter your trips and travels into an interactable calendar.</p>
             </div>
         </section>
         )

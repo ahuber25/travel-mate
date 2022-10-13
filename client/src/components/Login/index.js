@@ -1,40 +1,77 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../../utils/mutation';
 
-function Login() {
+import Auth from '../../utils/auth';
 
-  const [ signUp, setSignUp ] = useState(false)
+const Login = (props) => {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }] = useMutation(LOGIN_USER);
+
+  // update state based on form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  // submit form
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await login({
+        variables: { ...formState },
+      });
+
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+    // clear form values
+    setFormState({
+      email: '',
+      password: '',
+    });
+  };
 
   return (
-    <section className="login">
-        <div className="signin">
-        {!signUp ? (            
-            <form className="logsign logging">
-            <h2>Login</h2>
-                <label>Username:</label> <input type="text" name="username" /><br/>
-                <label>Password:</label> <input type="text" name="password" /><br/>
-                <input type="submit" value="Submit" /><br/>
-
-                <span onClick={() => {
-                    setSignUp(true)
-                }}>Don't have an Account? Sign up!</span>
-
+    <section>
+          
+          <div className="logsign">
+          <h2>Login</h2>
+            <form onSubmit={handleFormSubmit}>
+              <input
+                className="form-input"
+                placeholder="Your email"
+                name="email"
+                type="email"
+                id="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+              <input
+                className="form-input"
+                placeholder="******"
+                name="password"
+                type="password"
+                id="password"
+                value={formState.password}
+                onChange={handleChange}
+              />
+              <button className="btn d-block w-100" type="submit">
+                Submit
+              </button>
+              <div><a href="/signup">Don't have an account? Sign up here!</a></div>
             </form>
-            ) : (
-            <form className="logsign">
-            <h2>Signup</h2>
-            <label>Name:</label> <input type="text" name="name" /><br/>
-            <label>Username:</label> <input type="text" name="username" /><br/>
-            <label>Email:</label> <input type="text" name="email" /><br/>
-            <label>Password:</label> <input type="text" name="password" /><br/>
-            <input type="submit" value="Submit" /><br/>
-            <span onClick={() => {
-                    setSignUp(false)
-                }}>Have an account? Log in!</span>
-        </form>
-        )}
-        </div>
-        </section>
-        
+
+            {error && <div>Login failed</div>}
+          </div>
+          </section>
   );
 };
 
