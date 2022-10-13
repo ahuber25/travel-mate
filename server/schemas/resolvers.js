@@ -91,18 +91,18 @@ const resolvers = {
     trip: async (parent, { _id }) => {
       return await Trip.findById(_id).populate("day");
     },
-    event: async (parent, { _id }, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: "events.trips",
-          populate: "day",
-        });
+    // event: async (parent, { _id }, context) => {
+    //   if (context.user) {
+    //     const user = await User.findById(context.user._id).populate({
+    //       path: "events.trips",
+    //       populate: "day",
+    //     });
 
-        return user.events.id(_id);
-      }
+    //     return user.events.id(_id);
+    //   }
 
-      throw new AuthenticationError("Not logged in");
-    },
+    //   throw new AuthenticationError("Not logged in");
+    // },
   },
   Mutation: {
     addUser: async (parent, args) => {

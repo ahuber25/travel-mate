@@ -1,7 +1,7 @@
 import React from "react";
 import { 
   Route,
-  Routes, Router } from "react-router-dom";
+  Routes, } from "react-router-dom";
 import Nav from './components/Nav/index';
 import Header from './components/Header';
 import Home from './components/Home/index';
@@ -42,7 +42,7 @@ function App() {
   
     return (
       <ApolloProvider client={client}>
-        <Router>
+    
       <div>
           <Nav></Nav>
           <Header/>
@@ -54,7 +54,7 @@ function App() {
           </Routes>
           <Footer/>
       </div>
-      </Router>
+      
       </ApolloProvider>
     );
 }
